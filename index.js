@@ -14,9 +14,9 @@ app.options('*',cors());
 //Middlewears
 app.use(bodyParser.json())
 app.use(morgan('tiny'))
-app.use(authJwt())
+//app.use(authJwt())
 app.use('/public/uploads',express.static(__dirname+'/public/uploads'))
-app.use(errorHandler);
+//app.use(errorHandler);
 let port=process.env.PORT || 5000;
 app.get('/',(req,res)=>{
     res.send("Hello World"+api)
