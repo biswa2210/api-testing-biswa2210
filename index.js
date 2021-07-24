@@ -1,8 +1,18 @@
-const express = require('express');
+const express=require('express');
 const app = express();
-const data=require('./data.json');
-let port=process.env.PORT || 3000;
+require('dotenv/config');
+bodyParser = require('body-parser');
+const morgan = require('morgan');
+const mongoose = require('mongoose');
 const api=process.env.API_URL;
+const cors = require('cors');
+const data=require('./data.json')
+app.use(cors());
+app.options('*',cors());
+//Middlewears
+app.use(bodyParser.json())
+app.use(morgan('tiny'))
+let port=process.env.PORT || 3000;
 app.get('/',(req,res)=>{
     res.send("Hello World"+api)
 })
