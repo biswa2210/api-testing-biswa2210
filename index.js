@@ -6,7 +6,7 @@ const data=require('./data.json')
 
 let port=process.env.PORT || 5000;
 app.get('/',(req,res)=>{
-    res.send("Hello World"+api)
+    res.send("Hello World")
 })
 app.get('/developers',(req,res)=>{
     res.send(data)
