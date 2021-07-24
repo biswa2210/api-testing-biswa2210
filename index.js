@@ -13,7 +13,7 @@ app.options('*',cors());
 app.use(bodyParser.json())
 app.use(morgan('tiny'))
 app.use('/public/uploads',express.static(__dirname+'/public/uploads'))
-let port=process.env.PORT || 3000;
+const port = process.env.PORT || 5000;
 
 //Routers
 const productRouter=require('./routers/products');
@@ -24,10 +24,18 @@ app.use(`${api}/products`,productRouter);
 app.use(`${api}/users`,userRouter);
 app.use(`${api}/orders`,orderRouter);
 app.use(`${api}/categories`,categoriesRouter);
+if (process.env.NODE_ENV === "production") {
+    app.use(express.static("client/build"));
+  
+    app.get("*", (req, res) => {
+      res.sendFile(path.resolve(__dirname, "client", "build", "index.html"));
+    });
+  }
 //Database Connections---------------------------------------->
 mongoose.connect(process.env.CONNECTION_URL,{
-    useNewUrlParser:true,
-    useUnifiedTopology:true,
+    useNewUrlParser: true,
+        useCreateIndex: true,
+        useUnifiedTopology: true,
     dbName : 'daily-deals_database'
 })
 .then(()=>{
