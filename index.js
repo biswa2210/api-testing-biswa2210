@@ -20,6 +20,15 @@ app.get('/',(req,res)=>{
 app.get('/developers',(req,res)=>{
     res.send(data)
 })
+//Routers
+const productRouter=require('./routers/products');
+const userRouter=require('./routers/users');
+const orderRouter=require('./routers/orders');
+const categoriesRouter=require('./routers/categories');
+app.use(`${api}/products`,productRouter);
+app.use(`${api}/users`,userRouter);
+app.use(`${api}/orders`,orderRouter);
+app.use(`${api}/categories`,categoriesRouter);
 //Database Connections---------------------------------------->
 mongoose.connect(process.env.CONNECTION_URL,{
     useNewUrlParser:true,
