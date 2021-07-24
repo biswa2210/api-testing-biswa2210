@@ -13,7 +13,7 @@ app.options('*',cors());
 app.use(bodyParser.json())
 app.use(morgan('tiny'))
 app.use('/public/uploads',express.static(__dirname+'/public/uploads'))
-let port=process.env.PORT || 3000;
+let port=process.env.PORT || 5000;
 app.get('/',(req,res)=>{
     res.send("Hello World"+api)
 })
