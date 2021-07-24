@@ -6,7 +6,6 @@ bodyParser = require('body-parser');
 const morgan = require('morgan');
 const mongoose = require('mongoose');
 const api=process.env.API_URL;
-const secret = process.env.secret;
 const cors = require('cors');
 const data=require('./data.json')
 const authJwt=require('./helpers/jwt');
@@ -17,7 +16,7 @@ app.options('*',cors());
 app.use(bodyParser.json());
 app.use(morgan('tiny'));
 app.use(expressJwt({
-    secret,
+    secret: 'shhhhhhared-secret',
     algorithms: ['HS256'],
     isRevoked: isRevoked
 }).unless({
