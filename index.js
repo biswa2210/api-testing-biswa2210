@@ -14,6 +14,7 @@ app.use(bodyParser.json())
 app.use(morgan('tiny'))
 app.use('/public/uploads',express.static(__dirname+'/public/uploads'))
 let port=process.env.PORT || 3000;
+
 //Routers
 const productRouter=require('./routers/products');
 const userRouter=require('./routers/users');
