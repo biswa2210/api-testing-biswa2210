@@ -8,7 +8,7 @@ app.get('/',(req,res)=>{
 })
 app.get('/developers',(req,res)=>{
     res.send(data)
-})/*
+})
 //Database Connections---------------------------------------->
 mongoose.connect(process.env.CONNECTION_URL,{
     useNewUrlParser:true,
@@ -21,7 +21,7 @@ mongoose.connect(process.env.CONNECTION_URL,{
     console.log(err);
 })
 //------------------------------------------------------------>
-*/
+
 app.listen(port,()=>{
     console.log("The Testing App is listening on the port of : "+port);
 })
