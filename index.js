@@ -10,7 +10,7 @@ app.get('/developers',(req,res)=>{
     res.send(data)
 })
 //Database Connections---------------------------------------->
-mongoose.connect("mongodb+srv://dailydeals-user:12345678DD@cluster0.7d4af.mongodb.net/daily-deals_database?retryWrites=true&w=majority",{
+mongoose.connect(process.env.CONNECTION_URL,{
     useNewUrlParser:true,
     useUnifiedTopology:true,
     dbName : 'daily-deals_database'
