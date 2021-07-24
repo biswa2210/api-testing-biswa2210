@@ -6,12 +6,25 @@ const morgan = require('morgan');
 const mongoose = require('mongoose');
 const api=process.env.API_URL;
 const cors = require('cors');
-const data=require('./data.json')
+const authJwt=require('./helpers/jwt');
+const errorHandler = require('./helpers/error-handler');
 app.use(cors());
 app.options('*',cors());
 //Middlewears
 app.use(bodyParser.json())
 app.use(morgan('tiny'))
+app.use(authJwt())
+app.use('/public/uploads',express.static(__dirname+'/public/uploads'))
+app.use(errorHandler);
+//Routers
+const productRouter=require('./routers/products');
+const userRouter=require('./routers/users');
+const orderRouter=require('./routers/orders');
+const categoriesRouter=require('./routers/categories');
+app.use(`${api}/products`,productRouter);
+app.use(`${api}/users`,userRouter);
+app.use(`${api}/orders`,orderRouter);
+app.use(`${api}/categories`,categoriesRouter);
 let port=process.env.PORT || 3000;
 app.get('/',(req,res)=>{
     res.send("Hello World"+api)
