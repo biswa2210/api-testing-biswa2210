@@ -14,8 +14,8 @@ const errorHandler = require('./helpers/error-handler');
 app.use(cors());
 app.options('*',cors());
 //Middlewears
-app.use(bodyParser.json())
-app.use(morgan('tiny'))
+app.use(bodyParser.json());
+app.use(morgan('tiny'));
 app.use(expressJwt({
     secret,
     algorithms: ['HS256'],
