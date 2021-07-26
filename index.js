@@ -1,12 +1,80 @@
 const express=require('express');
+var admin = require("firebase-admin");
+const UUID = require('uuid-v4');
+const multer=require('multer');
 const app = express();
 require('dotenv/config');
-const api=process.env.API_URL;
-const data=require('./data.json')
+const data=require('./data.json');
+var serviceAccount = require("./serviceAccount/daily-deals-images-bucket-firebase-adminsdk-1rlpi-de37131eb0.json");
+const FILE_TYPE_MAP = {
+    'image/png': 'png',
+    'image/jpeg': 'jpeg',
+    'image/jpg': 'jpg',
+};
 
+const storage = multer.diskStorage({
+    destination: function (req, file, cb) {
+        const isValid = FILE_TYPE_MAP[file.mimetype];
+        let uploadError = new Error('invalid image type');
+
+        if (isValid) {
+            uploadError = null;
+        }
+        cb(uploadError, 'public/uploads');
+    },
+    filename: function (req, file, cb) {
+        const fileName = file.originalname.split(' ').join('-');
+        const extension = FILE_TYPE_MAP[file.mimetype];
+        cb(null, `${fileName}-${Date.now()}.${extension}`);
+    },
+});
+
+const uploadOptions = multer({ storage: storage });
+//--------------FIREBASE CONNECTION INITIALIZED--------------//
+admin.initializeApp({
+    credential: admin.credential.cert(serviceAccount),
+    storageBucket: "daily-deals-images-bucket.appspot.com"
+});
+//-----------------------------------------------------------//
+//MIDDLEWARES--------------------->
+
+//-------------------------------->
 let port=process.env.PORT || 5000;
-app.get('/',(req,res)=>{
-    res.send("Hello World")
+var bucket = admin.storage().bucket();
+var pok='';
+function setUrl(str){
+    pok=str;
+}
+async function uploadFile(filepath,filename) {
+    let uuid = UUID();
+  const metadata = {
+    metadata: {
+      // This line is very important. It's to create a download token.
+      firebaseStorageDownloadTokens: uuid
+    },
+  };
+  await bucket.upload(filepath, {
+    // Support for HTTP requests made with `Accept-Encoding: gzip`
+    gzip: true,
+    metadata: metadata,
+  }).then((data)=>{
+   setUrl("https://firebasestorage.googleapis.com/v0/b/" + bucket.name + "/o/" +filename+ "?alt=media&token=" + uuid);
+  })
+
+}
+
+
+app.post('/upload',uploadOptions.single('image') ,async (req,res)=>{
+    try{
+        const fileName = req.file.filename;
+        uploadFile(`public/uploads/${fileName}`,`${fileName}`).then(downloadUrl=>{
+            console.log(pok);
+        }).catch(console.error);
+        res.send({message:"Hello this is a simple api to understand how to connect google drive storage bucket in our heroku server"})
+    }catch(err){
+        console.log(err);
+    }
+
 })
 app.get('/developers',(req,res)=>{
     res.send(data)
