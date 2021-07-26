@@ -70,7 +70,7 @@ app.post('/upload',uploadOptions.single('image') ,async (req,res)=>{
         uploadFile(`public/uploads/${fileName}`,`${fileName}`).then(downloadUrl=>{
             console.log(pok);
         }).catch(console.error);
-        res.send({message:"Hello this is a simple api to understand how to connect google drive storage bucket in our heroku server"})
+        res.send({message:"get url : "+pok})
     }catch(err){
         console.log(err);
     }
