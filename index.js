@@ -64,13 +64,69 @@ async function uploadFile(filepath,filename) {
 }
 
 
+
+//------------------------------------------------------------------------------------------------>
+var pokitem='';
+var listurls=[];
+function setUrll(str){
+    pokitem=str;
+    listurls.push(pokitem);
+}
+async function uploadFiles(filepaths,filenames) {
+    let uuid = UUID();
+  const metadata = {
+    metadata: {
+      // This line is very important. It's to create a download token.
+      firebaseStorageDownloadTokens: uuid
+    },
+  };
+  for(let i = 0; i < filepaths.length; i++){
+    await bucket.upload(filepaths[i], {
+        // Support for HTTP requests made with `Accept-Encoding: gzip`
+        gzip: true,
+        metadata: metadata,
+      });
+    setUrll("https://firebasestorage.googleapis.com/v0/b/" + bucket.name + "/o/" +filenames[i]+ "?alt=media&token=" + uuid);
+  }
+}
+
+
+
+
+
+app.post('/uploads',uploadOptions.array('images',10) ,async (req,res)=>{
+        const files = req.files;
+        const imagePaths = [];
+        const images = [];
+        if (files) {
+            files.map((file) => {
+                imagePaths.push(`public/uploads/${file.filename}`)
+                images.push(`${file.filename}`)
+            })
+        }
+    console.log(imagePaths);
+    console.log(images);
+     uploadFiles(imagePaths,images).then(data=>{
+        console.log(listurls);
+     })
+     
+     res.send({status:"Images uploaded in firebase"});
+   
+
+})
+
+//---------------------------------------------------------------------------------------------------------------->
+
+
+
 app.post('/upload',uploadOptions.single('image') ,async (req,res)=>{
     try{
         const fileName = req.file.filename;
         uploadFile(`public/uploads/${fileName}`,`${fileName}`).then(downloadUrl=>{
             console.log(pok);
+            res.send({status:"Image uploaded in firebase",url: pok})
         }).catch(console.error);
-        res.send({message:"get url : "+pok})
+        
     }catch(err){
         console.log(err);
     }
