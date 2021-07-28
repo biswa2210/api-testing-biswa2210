@@ -60,14 +60,9 @@
 
 ## Folder Structure :point_down:
 ```bash
-todolist-Angular
-       ├── src
-       |     ├── app
-       |     |     ├── My Components
-       |     |     |           ├── add-tod
-       |     |     |           |      └── todo-item.component.ts
-       |     |     |           └── todos
-       |     |     |                  ├── todos.component.css
+api-testing-biswa2210
+       ├── public/uploads
+       |          └── files are uploaded here
 
 ```
 
