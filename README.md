@@ -20,9 +20,33 @@ An application programming interface (API) is a connection between computers or 
       
 </div>
 
+## About HEROKU :point_down: 
+
+<div align="justified">
+ 
+Heroku is a cloud platform as a service (PaaS) supporting several programming languages. One of the first cloud platforms, Heroku has been in development since June 2007, when it supported only the Ruby programming language, but now supports Java, Node.js, Scala, Clojure, Python, PHP, and Go. For this reason, Heroku is said to be a polyglot platform as it has features for a developer to build, run and scale applications in a similar manner across most languages. Heroku was acquired by Salesforce.com in 2010 for $212 million. Heroku was initially developed by James Lindenbaum, Adam Wiggins, and Orion Henry for supporting projects that were compatible with the Ruby programming platform known as Rack. I have used HEROKU to host my api.
+ 
+</div>
+
+
 ## About this project :point_down:
 
-I have made this API testing and run it in locaalhost where I defined the port number. So we can run this API in localhost through npm start. The
+### LOCALHOST  :point_down:
+
+<div align="justified">
+ 
+I have made this API testing and run it in localhost where I defined the port number. So we can run this API in localhost through npm start. Using the API in localhost we can upload image files in updates folder in public folder using POST REQUEST. After that it will be uploaded in my 'daily-deals-images-bucket's storage in https://console.firebase.google.com/project/daily-deals-images-bucket/storage/daily-deals-images-bucket.appspot.com/files in my firebase acount associated with my email id 'bbiswa471@gmail.com'. If a user is 'ADMIN USER' he or she will be able to get details like user details. For this he or she has to use GET REQUEST.
+ 
+</div>
+
+### HEROKUAPP LINK :point_down:
+
+
+<div align="justified">
+ 
+I have made this API testing and hosted it in HEROKU. I have generated a link through HEROKU. Using the API in localhost we can upload image files in updates folder in public folder using POST REQUEST. After that it will be uploaded in my 'daily-deals-images-bucket's storage in https://console.firebase.google.com/project/daily-deals-images-bucket/storage/daily-deals-images-bucket.appspot.com/files in my firebase acount associated with my email id 'bbiswa471@gmail.com'. If a user is 'ADMIN USER' he or she will be able to get details like user details. For this he or she has to use GET REQUEST.
+ 
+</div>
 
 ## Some points about data user put in this app :point_down:
  - [x] 'Safe'<br>
