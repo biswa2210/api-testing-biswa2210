@@ -76,22 +76,16 @@ The Heroku filesystem is ephemeral - that means that any changes to the filesyst
 
 <div align="justified">
 
-The development of apps for mobile devices meant that organizations needed to allow users to access information through apps and not just through the Internet. Within the public sector, APIs are used to allow agencies to easily share information and also lets the public interact with government as well. While there are numerous protocols and technologies involved, the underlying purpose of APIs is always the same: to let one piece of software communicate with another.
+The development of apps for mobile devices meant that organizations needed to allow users to access information through apps and not just through the Internet. Within the public sector, APIs are used to allow agencies to easily share information and also lets the public interact with government as well. While there are numerous protocols and technologies involved, the underlying purpose of APIs is always the same: to let one piece of software communicate with another. I have made this API testing to work on my android or ios e-commerce application daily deals easily.
 
 </div>
 
-## Use :point_down:
-
-<div align="justified">
-
-
-</div>      
-       
 ## Importance :point_down:
 
 <div align="justified">
   
-
+APIs, or application program interfaces, are vital tools for businesses in all industries. The importance of APIs from a technical standpoint, they allow the capabilities of one computer program to be used by another. They are a means by which two different programs are able to communicate. APIs represent more than technical conduits for sharing data. Well-designed APIs provide organizations with a critical link to data and services that enable rapid innovation, open up markets for new goods and services, and serve as the basis for future partnerships. APIs have the potential to transform businesses. Traditional strategies rely on large sales forces, paperwork and other time-consuming, outdated and expensive measures to run their businesses, and the practice is becoming less sustainable all the time. Forward-thinking companies are reducing costs and time spent by “building their solutions with best-of-breed components, which they access via APIs,”
+ 
 </div>
 
 ## Folder Structure :point_down:
@@ -99,7 +93,13 @@ The development of apps for mobile devices meant that organizations needed to al
 api-testing-biswa2210
        ├── public/uploads
        |          └── files are uploaded here
-
+       ├── serviceAccount
+       ├── data.json
+       ├── index.js
+       ├── package-lock.json
+       ├── package.json
+       ├── .env
+       └── procfile
 ```
 
 ## Making :point_down:
