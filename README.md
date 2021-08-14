@@ -89,6 +89,7 @@ APIs, or application program interfaces, are vital tools for businesses in all i
 </div>
 
 ## Folder Structure :point_down:
+
 ```bash
 api-testing-biswa2210
        ├── public/uploads
@@ -106,15 +107,16 @@ api-testing-biswa2210
 
 <div align="justified">
   
-
-
+This is a project based on node js. I have implemented it using npm. I have created index.js which is the entry point of the api project. The storage bucket name of the api in firebase is daily-deals-images-bucket.appspot.com. We have used firebase admin module for linking the API with firebase. We have created [daily-deals-images-bucket](https://console.firebase.google.com/project/daily-deals-images-bucket/overview) in firebase. We have linked the API with this using 
+[Multer](https://www.npmjs.com/package/multer). Multer is a node.js middleware for handling multipart/form-data, which is primarily used for uploading files. It is written on top of busboy for maximum efficiency. We have used Express Js for sending requests. We have used axios for handling requests. We have used UID version4. The UUIDv4 implementation uses random numbers as the source. The Java implementation is SecureRandom, which uses an unpredictable value as the seed to generate random numbers to reduce the chance of collisions. We have used this for keeping the files with unique name.
+ 
 </div>
 
 ## Screenshots :point_down: 
 
 <div align="center">
 
-<a href="pics/todo1.PNG"><img src="pics/todo1.PNG" width="400" height= "300"></a> <a href="pics/todo2.PNG"><img src="pics/todo2.PNG" width="400" height= "300"></a>
+<a href="pics/"><img src="pics/todo1.PNG" width="400" height= "300"></a> <a href="pics/todo2.PNG"><img src="pics/todo2.PNG" width="400" height= "300"></a>
   
 </div>
 
