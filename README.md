@@ -1,5 +1,7 @@
 # API-TESTING :star_struck: :computer:
 
+[![Generic badge](https://img.shields.io/badge/Express-4.7.1-orange)](https://shields.io) [![Generic badge](https://img.shields.io/badge/Firebase%20Admin-9.11.0-brightgreen)](https://shields.io) [![Generic badge](https://img.shields.io/badge/UUID%20V4-0.1.0-yellow)](https://shields.io) [![Generic badge](https://img.shields.io/badge/Multer-1.4.2-blue)](https://shields.io)
+
 ***This new API is created by Biswarup Bhattacharjee, student of BTECH, in University of Engineering and Management, Kolkata.***
 
 **Email Id: bbiswa471@gmail.com.** 
