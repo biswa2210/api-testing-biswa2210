@@ -1,4 +1,4 @@
-# API-TESTING-BISWA2210 :star_struck: :computer:
+# API-TESTING :star_struck: :computer:
 
 ***This new API is created by Biswarup Bhattacharjee, student of BTECH, in University of Engineering and Management, Kolkata.***
 
@@ -108,7 +108,7 @@ api-testing-biswa2210
 <div align="justified">
   
 This is a project based on node js. I have implemented it using npm. I have created index.js which is the entry point of the api project. The storage bucket name of the api in firebase is daily-deals-images-bucket.appspot.com. We have used firebase admin module for linking the API with firebase. We have created [daily-deals-images-bucket](https://console.firebase.google.com/project/daily-deals-images-bucket/overview) in firebase. We have linked the API with this using 
-[Multer](https://www.npmjs.com/package/multer). Multer is a node.js middleware for handling multipart/form-data, which is primarily used for uploading files. It is written on top of busboy for maximum efficiency. We have used Express Js for sending requests. We have used axios for handling requests. We have used UID version4. The UUIDv4 implementation uses random numbers as the source. The Java implementation is SecureRandom, which uses an unpredictable value as the seed to generate random numbers to reduce the chance of collisions. We have used this for keeping the files with unique name.
+[Multer](https://www.npmjs.com/package/multer). Multer is a node.js middleware for handling multipart/form-data, which is primarily used for uploading files. It is written on top of busboy for maximum efficiency. We have used Express Js for sending requests. We have used axios for handling requests. We have used [UID](https://www.npmjs.com/package/uuid) version4. The UUIDv4 implementation uses random numbers as the source. The Java implementation is SecureRandom, which uses an unpredictable value as the seed to generate random numbers to reduce the chance of collisions. We have used this for keeping the files with unique name.
  
 </div>
 
@@ -116,7 +116,21 @@ This is a project based on node js. I have implemented it using npm. I have crea
 
 <div align="center">
 
-<a href="pics/"><img src="pics/todo1.PNG" width="400" height= "300"></a> <a href="pics/todo2.PNG"><img src="pics/todo2.PNG" width="400" height= "300"></a>
+API TESTING IN HEROKU
+ 
+<a href="pics/heroku.jpg"><img src="pics/heroku.jpg" width="800" height= "300"></a>
+ 
+WE CAN UPLOAD IMAGE IN HEROKUAPP AND THEN IN FIREBASE USING POST REQUEST IN POSTMAN
+ 
+<a href="pics/upload.jpg"><img src="pics/uploads.jpg" width="800" height= "300"></a>
+ 
+WE CAN UPLOAD IMAGE IN HEROKUAPP AND THEN IN FIREBASE USING POST REQUEST IN POSTMAN
+ 
+<a href="pics/uploads.PNG"><img src="pics/uploads.PNG" width="800" height= "300"></a>
+ 
+WE CAN GET DEVELOPERS' DETAILS USING GET REQUEST IN POSTMAN
+ 
+<a href="pics/developers.PNG"><img src="pics/developers.PNG" width="800" height= "300"></a>
   
 </div>
 
