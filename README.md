@@ -118,19 +118,19 @@ This is a project based on node js. I have implemented it using npm. I have crea
 
 API TESTING IN HEROKU
  
-<a href="pics/heroku.jpg"><img src="pics/heroku.jpg" width="800" height= "300"></a>
+<a href="pics/heroku.jpg"><img src="pics/heroku.jpg" width="800" height= "400"></a>
  
 WE CAN UPLOAD IMAGE IN HEROKUAPP AND THEN IN FIREBASE USING POST REQUEST IN POSTMAN
  
-<a href="pics/upload.jpg"><img src="pics/uploads.jpg" width="800" height= "300"></a>
+<a href="pics/upload.jpg"><img src="pics/upload.jpg" width="800" height= "400"></a>
  
 WE CAN UPLOAD IMAGE IN HEROKUAPP AND THEN IN FIREBASE USING POST REQUEST IN POSTMAN
  
-<a href="pics/uploads.PNG"><img src="pics/uploads.PNG" width="800" height= "300"></a>
+<a href="pics/uploads.PNG"><img src="pics/uploads.PNG" width="800" height= "400"></a>
  
 WE CAN GET DEVELOPERS' DETAILS USING GET REQUEST IN POSTMAN
  
-<a href="pics/developers.PNG"><img src="pics/developers.PNG" width="800" height= "300"></a>
+<a href="pics/developers.PNG"><img src="pics/developers.PNG" width="800" height= "400"></a>
   
 </div>
 
