@@ -44,6 +44,14 @@ Postman is a collaboration platform for API development. Postman is a collaborat
  
 </div>
 
+## About Firebase :point_down:
+
+<div align="justified">
+ 
+Firebase is a platform developed by Google for creating mobile and web applications. It was originally an independent company founded in 2011. In 2014, Google acquired the platform and it is now their flagship offering for app development. Firebase provides the tools and infrastructure you need to develop, grow, and earn money from our app. Firebase helps teams from startups to global enterprises build & run successful apps. I have created project here and here all the images were stored for my android application.
+ 
+</div>
+
 ### LOCALHOST  :point_down:
 
 <div align="justified">
